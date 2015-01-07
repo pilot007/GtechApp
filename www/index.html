@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="msapplication-tap-highlight" content="no" />         
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
+<div data-role="page" id="barkod">
+    <div data-role="header" align="center">
+    	<br/>
+        FİBA GRUP<div id="un_barkod"> </div> <div id="point_barkod"> </div>
+		      <div >
+			      <a href="#barkod" data-ajax="false" onclick="app.fnc_Barkod()">			<img src="img/menu_icons/1_Home_.png" width="12%"> <img/></a>
+			      <a href="#puanlarim" data-ajax="false"  onclick="app.fnc_Puanlarim()">	<img src="img/menu_icons/2_Score.png" width="12%"> <img/></a>
+			      <a href="#mesajlar" data-ajax="false" onclick="app.fnc_Mesajlar()">		<img src="img/menu_icons/3_Message.png" width="12%"> <img/></a>
+			      <a href="#profil" data-ajax="false" onclick="app.fnc_Profil()">			<img src="img/menu_icons/4_Profile.png" width="12%"> <img/></a>
+			      <a href="#kampanyalar" data-ajax="false" onclick="app.fnc_Kampanyalar()">	<img src="img/menu_icons/5_Campaign.png" width="12%"> <img/></a>
+			      <a href="#istatistik" data-ajax="false" onclick="app.fnc_Istatistik()">	<img src="img/menu_icons/6_Statistic.png" width="12%"> <img/></a>
+			      <a href="#enyakin" data-ajax="false" onclick="app.fnc_Enyakin()">			<img src="img/menu_icons/7_Map.png" width="12%"> <img/></a>
+		      </div>        
+    </div><!-- /header -->
+<div data-role="content">
+    	<div id="div_barkod">
+    		<div id="un_barkod2"> </div>
+    		Size özel üretilmiş dijital barkodunuzu alış verişlerinizde okutarak indirim ve puan kazabilirisiniz.
+    		<br/>
+    		<br/>
+    		<br/>
+    		<h2>
+    		<div id="barkod_id" align="center"> </div>
+    		</h2>
+    		<br/>
+    		<div align="center"> 
+    		<img src="img/qr_code.gif"><img/>
+    		</div>
+		</div>
+</div>
+	
+</div><!-- /page -->            
+            
+        <script type="text/javascript" src="js/PushwooshAndroid.js"></script>
+        <script type="text/javascript" src="js/PushwooshiOS.js"></script>
+        
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
